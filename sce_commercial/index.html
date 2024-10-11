@@ -1,0 +1,868 @@
+<!--#include file="../include/inc_con.asp" -->
+<!--#include file="../include/fonction.asp" -->
+<!--#include file="../include/encryption.asp" -->
+<!--#include file="../include/inc_var.asp" -->
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="msapplication-TileColor" content="#0061da">
+		<meta name="theme-color" content="#1643a3">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Title -->
+		<title>splink – Admin Bootstrap4 Responsive Webapp Dashboard Template</title>
+
+		<!-- Dashboard css -->
+		<link href="assets/css/dashboard.css" rel="stylesheet" />
+
+		<!-- Font family -->
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+
+		<!--C3 Charts css -->
+		<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+		<!-- Custom scroll bar css-->
+		<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+		<!--Horizontal css -->
+        <link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
+        <link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
+
+		<!-- jvectormap css -->
+        <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+		<!---Font icons css-->
+		<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+		<link  href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
+
+	</head>
+	<body class="app sidebar-mini rtl">
+
+		<!--Global-Loader-->
+		<div id="global-loader"></div>
+
+		<div class="page">
+			<div class="page-main">
+
+				<!--app-header-->
+				<div class="app-header header d-flex">
+					<div class="container">
+						<div class="d-flex">
+						    <a class="header-brand" href="index.html">
+								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="splink logo">
+							</a><!-- logo-->
+							<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a><!-- sidebar-toggle-->
+							<a href="#" data-toggle="search" class="nav-link nav-link d-md-none navsearch"><i class="fa fa-search"></i></a><!-- search icon -->
+							<div class="dropdown d-none d-lg-block d-md-flex user">
+								<a class="nav-link icon" data-toggle="dropdown">
+									<i class="fe fe-user"></i>
+									<span class="pulse bg-danger"></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+									<a class="dropdown-item d-flex pb-3" href="#">
+										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/male/4.jpg"></span>
+										<div>
+											<strong>Madeleine Scott</strong> Sent you add request
+											<div class="small text-muted">
+												view profile
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item d-flex pb-3" href="#">
+										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/female/14.jpg"></span>
+										<div>
+											<strong>rebica</strong> Suggestions for you
+											<div class="small text-muted">
+												view profile
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item d-flex pb-3" href="#">
+										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/male/1.jpg"></span>
+										<div>
+											<strong>Devid robott</strong> sent you add request
+											<div class="small text-muted">
+												view profile
+											</div>
+										</div>
+									</a>
+									<div class="dropdown-divider"></div><a class="dropdown-item text-center text-muted-dark" href="#">View all contact list</a>
+								</div>
+							</div><!-- user-icon -->
+							<div class="dropdown d-none d-lg-block">
+								<a class="nav-link icon" data-toggle="dropdown" aria-expanded="false">
+									<i class="fe fe-bell "></i>
+									<span class="pulse bg-danger"></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+									<a href="#" class="dropdown-item text-center">3 New Notifications</a>
+									<div class="dropdown-divider"></div>
+									<a href="#" class="dropdown-item d-flex pb-3">
+										<div class="notifyimg bg-green">
+											<i class="fa fa-thumbs-o-up "></i>
+										</div>
+										<div>
+											<strong>Someone likes our posts.</strong>
+											<div class="small text-muted">3 hours ago</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item d-flex pb-3">
+										<div class="notifyimg bg-blue">
+											<i class="fa fa-commenting-o"></i>
+										</div>
+										<div>
+											<strong> 3 New Comments</strong>
+											<div class="small text-muted">5  hour ago</div>
+										</div>
+									</a>
+									<a href="#" class="dropdown-item d-flex pb-3">
+										<div class="notifyimg bg-orange">
+											<i class="fa fa-eye"></i>
+										</div>
+										<div>
+											<strong> 10 views</strong>
+											<div class="small text-muted">2  hour ago</div>
+										</div>
+									</a>
+									<div class="dropdown-divider"></div>
+									<a href="#" class="dropdown-item text-center">View all Notifications</a>
+								</div>
+							</div><!-- notifications -->
+							<div class="dropdown dropgroupicons d-none d-lg-block">
+								<a class="nav-link icon" data-toggle="dropdown">
+									<i class="fe fe-grid floating"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow p-0">
+									<div class="drop-icon-wrap p-0 m-0 clearfix">
+										<div>
+											<a href="#l" class="drop-icon-item">
+												<img src="assets/images/svgicons/calendar.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
+												<span class="block drop-font"> Calender</span>
+											</a>
+										</div>
+										<div>
+											<a href="#l" class="drop-icon-item">
+												<img src="assets/images/svgicons/email.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
+												<span class="block drop-font">E-mail</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/phone-book.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6">
+												<span class="block drop-font">Contacts</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/question.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6">
+												<span class="block drop-font">Help</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/notification.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
+												<span class="block drop-font">Notifications</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/report.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6 ">
+												<span class="block drop-font">News</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/accountant.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6 ">
+												<span class="block drop-font">Account</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/translation.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6 ">
+												<span class="block drop-font">Translate</span>
+											</a>
+										</div>
+										<div>
+											<a href="#" class="drop-icon-item">
+												<img src="assets/images/svgicons/settings.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6 ">
+												<span class="block drop-font">Settings</span>
+											</a>
+										</div>
+										<div class="clearfix"></div>
+										<div class="dropdown-divider"></div>
+									</div>
+									<a href="#" class="dropdown-item text-center">More</a>
+								</div>
+							</div><!-- gird-icon -->
+							<div class="dropdown d-none d-md-flex">
+								<a  class="nav-link icon full-screen-link">
+									<i class="fe fe-maximize-2"  id="fullscreen-button"></i>
+								</a>
+							</div><!-- full-screen -->
+							<div class="d-flex order-lg-2 ml-auto horizontal-dropdown">
+								<form class="form-inline">
+									<div class="search-element mr-3">
+										<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+										<span class="Search-icon"><i class="fa fa-search"></i></span>
+									</div>
+								</form><!-- search-bar -->
+								<div class="dropdown d-none d-md-flex">
+									<a href="#" class="d-flex nav-link pr-0 country-flag1" data-toggle="dropdown">
+										<span class="avatar country-Flag mr-2 align-self-center"><img src="assets/images/us_flag.jpg" alt="img"></span>
+										<div>
+											<span class="text-gray-white mr-3 mt-0">English</span>
+										</div>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<a href="#" class="dropdown-item d-flex pb-3">
+											<span class="avatar  mr-3 align-self-center"><img src="assets/images/french_flag.jpg" alt="img"></span>
+											<div class="d-flex">
+												<span class="mt-2">French</span>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item d-flex pb-3">
+											<span class="avatar  mr-3 align-self-center"><img src="assets/images/germany_flag.jpg" alt="img"></span>
+											<div class="d-flex">
+												<span class="mt-2">Germany</span>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item d-flex pb-3">
+											<span class="avatar mr-3 align-self-center"><img src="assets/images/italy_flag.jpg" alt="img"></span>
+											<div class="d-flex">
+												<span class="mt-2">Italy</span>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item d-flex pb-3">
+											<span class="avatar mr-3 align-self-center"><img src="assets/images/russia_flag.jpg" alt="img"></span>
+											<div class="d-flex">
+												<span class="mt-2">Russia</span>
+											</div>
+										</a>
+										<a href="#" class="dropdown-item d-flex pb-3">
+											<span class="avatar  mr-3 align-self-center"><img src="assets/images/spain_flag.jpg" alt="img"></span>
+											<div class="d-flex">
+												<span class="mt-2">spain</span>
+											</div>
+										</a>
+									</div>
+								</div><!-- flag -->
+								<div class="dropdown dropdown-toggle">
+									<a href="#" class="nav-link leading-none" data-toggle="dropdown">
+										<span class="avatar avatar-md brround"><img src="assets/images/faces/male/33.jpg" alt="Profile-img" class="avatar avatar-md brround"></span>
+										<span class="mr-3 d-none d-lg-block ">
+											<span class="text-gray-white"><span class="ml-2">Alexander</span></span>
+										</span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+										<div class="text-center">
+											<a href="#" class="dropdown-item text-center font-weight-sembold user">Alexander</a>
+											<div class="dropdown-divider"></div>
+										</div>
+										<a class="dropdown-item" href="#">
+											<i class="dropdown-icon mdi mdi-account-outline "></i> Profile
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="dropdown-icon  mdi mdi-settings"></i> Settings
+										</a>
+										<a class="dropdown-item" href="#">
+											<span class="float-right"><span class="badge badge-primary">6</span></span>
+											<i class="dropdown-icon mdi  mdi-message-outline"></i> Inbox
+										</a>
+										<a class="dropdown-item" href="#">
+											<i class="dropdown-icon mdi mdi-comment-check-outline"></i> Message
+										</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">
+											<i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+										</a>
+										<a class="dropdown-item" href="login.html">
+											<i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+										</a>
+									</div>
+								</div><!-- profile -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--app-header end-->
+
+				<!--Horizontal-menu-->
+				<div class="horizontal-main clearfix">
+					<div class="horizontal-mainwrapper container clearfix">
+						<nav class="horizontalMenu clearfix">
+							<ul class="horizontalMenu-list">
+								<li aria-haspopup="true"><a href="#" class="sub-icon active"><i class="fa fa-laptop"></i> Home <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="index.html">Service Dashboard </a></li>
+										<li aria-haspopup="true"><a href="index2.html">Finance Dashboard</a></li>
+										<li aria-haspopup="true"><a href="index3.html">Gaming Dashboard</a></li>
+										<li aria-haspopup="true"><a href="index4.html">HR Dashboard</a></li>
+										<li aria-haspopup="true"><a href="index5.html">Ecommerce Dashboard</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="widgets.html" class=""><i class="fa fa-window-maximize"></i> widgets</a></li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-th-large"></i> Apps <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="cards.html">Cards design</a></li>
+										<li aria-haspopup="true"><a href="cards-image.html">Image  Cards design</a></li>
+										<li aria-haspopup="true"><a href="chat.html">Default Chat</a></li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Calendar</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="calendar.html">Default calendar</a></li>
+												<li aria-haspopup="true"><a href="calendar2.html">Full calendar</a></li>
+											</ul>
+										</li>
+										<li aria-haspopup="true"><a href="notify.html">Notifications</a></li>
+										<li aria-haspopup="true"><a href="sweetalert.html">Sweet alerts</a></li>
+										<li aria-haspopup="true"><a href="rangeslider.html">Range slider</a></li>
+										<li aria-haspopup="true"><a href="scroll.html">Content Scroll bar</a></li>
+										<li aria-haspopup="true"><a href="counters.html">Counters</a></li>
+										<li aria-haspopup="true"><a href="loaders.html">Loaders</a></li>
+										<li aria-haspopup="true"><a href="time-line.html">Time Line</a></li>
+										<li aria-haspopup="true"><a href="rating.html">Rating</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon "><i class="fa fa-bandcamp"></i> UI Kit <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<div class="horizontal-megamenu clearfix">
+										<div class="container">
+											<div class="mega-menubg">
+												<div class="row">
+													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
+														<ul>
+															<li><a href="alerts.html">Alerts</a></li>
+															<li><a href="buttons.html">Buttons</a></li>
+															<li><a href="colors.html">Colors</a></li>
+															<li><a href="avatars.html"> Avatars</a></li>
+															<li><a href="dropdown.html">Drop downs</a></li>
+															<li><a href="thumbnails.html">Thumbnails</a></li>
+															<li><a href="mediaobject.html">Media Object</a></li>
+														</ul>
+													</div>
+													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
+														<ul>
+															<li><a href="list.html">List</a></li>
+															<li><a href="tags.html">Tags</a></li>
+															<li><a href="pagination.html">Pagination</a></li>
+															<li><a href="navigation.html">Navigation</a></li>
+															<li><a href="typography.html">Typography</a></li>
+															<li><a href="breadcrumbs.html"> Breadcrumbs</a></li>
+															<li><a href="invoice.html">Invoice</a></li>
+														</ul>
+													</div>
+													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
+														<ul>
+															<li><a href="badge.html">Badges</a></li>
+															<li><a href="jumbotron.html">Jumbotron</a></li>
+															<li><a href="panels.html">Panels</a></li>
+															<li><a href="profile.html">Profile</a></li>
+															<li><a href="editprofile.html">Edit Profile</a></li>
+															<li><a href="pricing.html">Pricing Tables</a></li>
+															<li><a href="gallery.html">Gallery</a></li>
+														</ul>
+													</div>
+													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
+														<ul>
+															<li><a href="email.html"> Email</a></li>
+															<li><a href="emailservices.html">Email Inbox</a></li>
+															<li><a href="about.html">About Company</a></li>
+															<li><a href="services.html">Services</a></li>
+															<li><a href="faq.html">FAQS</a></li>
+															<li><a href="terms.html">Terms and Conditions</a></li>
+															<li><a href="blog.html">Blog</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-cubes"></i> Advanced UI <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="modal.html">Modal</a></li>
+										<li aria-haspopup="true"><a href="tooltipandpopover.html">Tooltip and popover</a></li>
+										<li aria-haspopup="true"><a href="progress.html">Progress</a></li>
+										<li aria-haspopup="true"><a href="chart.html">Charts</a></li>
+										<li aria-haspopup="true"><a href="carousel.html">Carousels</a></li>
+										<li aria-haspopup="true"><a href="accordion.html">Accordions</a></li>
+										<li aria-haspopup="true"><a href="tabs.html">Tabs</a></li>
+										<li aria-haspopup="true"><a href="headers.html">Headers</a></li>
+										<li aria-haspopup="true"><a href="footers.html">Footers</a></li>
+										<li aria-haspopup="true"><a href="crypto-currencies.html">Crypto-currencies</a></li>
+										<li aria-haspopup="true"><a href="users-list.html">User List</a></li>
+										<li aria-haspopup="true"><a href="search.html">Search page</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-pie-chart"></i> Charts <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="chart-chartist.html">Chartjs Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-morris.html">Morris Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-am.html">Am Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-peity.html">Pie Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-echart.html">Echart Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-flot.html">Flot Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-high.html">High Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-nvd3.html">Nvd3 Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-dygraph.html">Dygraph Charts</a></li>
+										<li aria-haspopup="true"><a href="chart-c3.html">C3 Charts</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-newspaper-o"></i> Pages <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li><a href="maps.html">Vector Maps</a></li>
+										<li><a href="empty.html">Empty Page</a></li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Tables</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="tables.html">Default table</a></li>
+												<li aria-haspopup="true"><a href="datatable.html">Data Table</a></li>
+											</ul>
+										</li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Forms</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="form-elements.html">Form Elements</a></li>
+												<li aria-haspopup="true"><a href="form-wizard.html">Form-wizard Elements</a></li>
+												<li aria-haspopup="true"><a href="wysiwyag.html">Text Editor</a></li>
+											</ul>
+										</li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">E-commerce</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="shop.html">Products</a></li>
+												<li aria-haspopup="true"><a href="shop-des.html">Product Details</a></li>
+												<li aria-haspopup="true"><a href="cart.html">Shopping Cart</a></li>
+											</ul>
+										</li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Account</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="login.html">Login</a></li>
+												<li aria-haspopup="true"><a href="register.html">Register</a></li>
+												<li aria-haspopup="true"><a href="forgot-password.html">Forgot password</a></li>
+												<li aria-haspopup="true"><a href="lockscreen.html">Lock screen</a></li>
+											</ul>
+										</li>
+										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Error Pages</a>
+											<ul class="sub-menu">
+												<li aria-haspopup="true"><a href="400.html">400 Error</a></li>
+												<li aria-haspopup="true"><a href="401.html">401 Error</a></li>
+												<li aria-haspopup="true"><a href="403.html">403 Error</a></li>
+												<li aria-haspopup="true"><a href="404.html">404 Error</a></li>
+												<li aria-haspopup="true"><a href="500.html">500 Error</a></li>
+												<li aria-haspopup="true"><a href="503.html">503 Error</a></li>
+											</ul>
+										</li>
+										<li><a href="construction.html">Under Construction</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-info-circle"></i> Icons <i class="fa fa-angle-down horizontal-icon"></i></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="icons.html">Font Awesome</a></li>
+										<li aria-haspopup="true"><a href="icons2.html">Material Design Icons</a></li>
+										<li aria-haspopup="true"><a href="icons3.html">Simple line Icons</a></li>
+										<li aria-haspopup="true"><a href="icons4.html">Feather Icons</a></li>
+										<li aria-haspopup="true"><a href="icons5.html">Ionic Icons</a></li>
+										<li aria-haspopup="true"><a href="icons6.html"> Flag Icons</a></li>
+										<li aria-haspopup="true"><a href="icons7.html">pe7 Icons</a></li>
+										<li aria-haspopup="true"><a href="icons8.html">Themify Icons</a></li>
+										<li aria-haspopup="true"><a href="icons9.html"> Typicons Icons</a></li>
+										<li aria-haspopup="true"><a href="icons10.html">Weather Icons</a></li>
+									</ul>
+								</li>
+								<li aria-haspopup="true"><a href="https://themeforest.net/item/splink-admin-bootstrap-4-responsive-webapp-dashboard-template/23260674" class=""><i class="fa fa-question-circle"></i> Help & Support</a></li>
+							</ul>
+						</nav>
+						<!--Menu HTML Code-->
+					</div>
+				</div>
+
+                <!--content-area-->
+				<div class="content-area">
+					<div class="container">
+
+					    <!-- page-header -->
+						<div class="page-header">
+							<h4 class="page-title">Dashboard</h4>
+							<ol class="breadcrumb"><!-- breadcrumb -->
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Dashboard 1</li>
+							</ol><!-- End breadcrumb -->
+						</div>
+						<!-- End page-header -->
+
+						<!-- row -->
+						<div class="row">
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class=" ">
+											<h5>First call resolution</h5>
+										</div>
+										<h2 class="mb-2">6,382<span class="sparkline_bar1 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 30% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Unresolved calls</h5>
+										</div>
+										<h2 class="mb-2">654<span class="sparkline_bar2 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 10% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Avg Response time</h5>
+										</div>
+										<h2 class="mb-2">7,637<span class="sparkline_bar3 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-down  text-danger"></i> 8% Decrease</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Candidates Placed</h5>
+										</div>
+										<h2 class="mb-2">$7,850<span class="sparkline_bar4 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 15% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+						</div>
+						<!-- End row -->
+
+						<!-- row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+								<div class="card overflow-hidden">
+									<div class="card-header">
+										<h3 class="card-title">Request Volume Vs Service Level</h3>
+									</div>
+									<div class="card-body">
+										<div id="echart1" class="chart-dropshadow h-300"></div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+								<div class="card overflow-hidden">
+									<div class="card-header">
+										<h3 class="card-title">Customer Satisfaction</h3>
+									</div>
+									<div class="">
+										<div class="card-body">
+											<canvas id="pieChart" class="chart-dropshadow h-300"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- End col -->
+						<!-- End row -->
+
+						<!-- row -->
+                        <div class="row">
+						    <div class="col-xs-12 col-sm-12 col-lg-6 col-xl-7">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Customer retention</h3>
+									</div>
+									<div class="card-body">
+										<canvas id="service-chart" class="chart-dropshadow"></canvas>
+									</div>
+								</div>
+							</div><!-- End col -->
+						    <div class="col-xl-5 col-lg-6 col-sm-12 col-sm-12">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">Incoming Conversations</h4>
+									</div>
+									<div class="card-body">
+										<div id="echart6" class="chartsh chart-dropshadow h-300"></div>
+									</div>
+								</div>
+							</div>
+						</div><!-- End col -->
+						<!-- End row -->
+
+						<!-- row -->
+						<div class="row row-cards">
+							<div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Avg Time to Solve an issue</h3>
+									</div>
+									<div class="card-body">
+										<div class="">
+											<p class="text-muted mb-0">Less than 1 Hour</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-primary  w-95"></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">95%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">1-2 hours</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-secondary   w-70"  ></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">75%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">More than hours </p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-success w-55" ></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">55%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">more than 3hours</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-warning  w-30"></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">35%</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-xl-8 col-lg-6 col-md-12 col-sm-12">
+								<div class="card Revenue">
+									<div class="card-header">
+										<h3 class="card-title">Revenue Vs Support Cost</h3>
+									</div>
+									<div class="card-body">
+										<canvas id="service-chart2" class="chart-dropshadow "></canvas>
+									</div>
+								</div>
+							</div>
+						</div><!-- End col -->
+						<!-- End row -->
+
+                        <!-- row -->
+						<div class="row row-cards">
+						    <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+								<div class="card">
+									<div class="card-body text-center">
+										<h6>Total Conversation</h6>
+										<div class="h1 font-weight-semibold mb-1 text-primary">15,425</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body text-center">
+										<div class="h6">Total Customers</div>
+										<div class="h1 font-weight-semibold mb-1 text-secondary">5,435</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body text-center">
+										<div class="h6">Requests Answered</div>
+										<div class="h1 font-weight-semibold mb-1 text-success">32,784</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
+									</div>
+								</div>
+							</div><!-- End col -->
+                            <div class="col-xl-9 col-md-12 col-sm-12 col-lg-12">
+								<div class="card">
+									<div class="card-header ">
+										<h3 class="card-title">Rating Record</h3>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive service">
+											<table class="table table-bordered table-hover mb-0 text-nowrap ">
+												<thead>
+													<tr>
+														<th>Total calls</th>
+														<th>Trend</th>
+														<th>Call Duration</th>
+														<th>Resolution Rate</th>
+														<th>Satisfaction Rate</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>5,245</td>
+														<td>Ryan MacLeod</td>
+														<td>5min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(96, 82, 159,0.9)", "rgb(96, 82, 159,0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-primary  w-55"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>4,845</td>
+														<td>Jacob Sutherland</td>
+														<td>17min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(50, 202, 254, 0.9)", "rgb(50, 202, 254, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-secondary  w-70"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>2,736</td>
+														<td>James Oliver</td>
+														<td>12min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(255, 204, 0, 0.9)", "rgb(255, 204, 0, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-warning  w-50"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>3,637</td>
+														<td>Lisa Nash</td>
+														<td>25min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(94, 216, 79, 0.9)", "rgb(94, 216, 79, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-success  w-60"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>6,365</td>
+														<td>Alan Walsh</td>
+														<td>10min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(134, 126, 252,0.9)", "rgb(134, 126, 252,0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-purple  w-50"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>4,269</td>
+														<td>Pippa Mills</td>
+														<td>14min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(249, 80, 88, 0.9)", "rgb(249, 80, 88, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-danger w-30"></div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+						</div>
+						<!-- End row -->
+
+					</div>
+
+					<!--footer-->
+					<footer class="footer">
+						<div class="container">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-lg-12 col-sm-12   text-center">
+									Copyright © 2019 <a href="#">splink</a>. Designed by <a href="#">Spruko</a> All rights reserved.
+								</div>
+							</div>
+						</div>
+					</footer>
+					<!-- End Footer-->
+				</div>
+				<!-- End content-area-->
+			</div>
+		</div>
+		<!-- End Page-->
+
+		<!-- Back to top -->
+		<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+		<!-- Jquery js-->
+		<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+
+		<!--Bootstrap js-->
+		<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+
+		<!--Jquery Sparkline js-->
+		<script src="assets/js/vendors/jquery.sparkline.min.js"></script>
+
+		<!-- Chart Circle js-->
+		<script src="assets/js/vendors/circle-progress.min.js"></script>
+
+		<!-- Star Rating js-->
+		<script src="assets/plugins/rating/jquery.rating-stars.js"></script>
+
+		<!-- Flot Chart js-->
+		<script src="assets/plugins/flot/jquery.flot.js"></script>
+		<script src="assets/plugins/flot/jquery.flot.fillbetween.js"></script>
+		<script src="assets/plugins/flot/jquery.flot.pie.js"></script>
+
+		<!--Jquery.knob js-->
+		<script src="assets/plugins/othercharts/jquery.knob.js"></script>
+
+		<!--Other charts js-->
+		<script src="assets/js/othercharts.js"></script>
+
+		<!-- Chart js -->
+		<script src="assets/plugins/chart/Chart.bundle.js"></script>
+		<script src="assets/plugins/chart/utils.js"></script>
+
+		<!-- Peity Chart js-->
+		<script src="assets/plugins/peitychart/jquery.peity.min.js"></script>
+		<script src="assets/plugins/peitychart/peitychart.init.js"></script>
+
+		<!-- Input Mask js -->
+		<script src="assets/plugins/input-mask/jquery.mask.min.js"></script>
+
+		<!-- Custom scroll bar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Horizontal js-->
+		<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
+
+		<!-- Index js -->
+		<script src="assets/js/index1.js"></script>
+
+		<!-- Search Js-->
+		<script src="assets/js/prefixfree.min.js"></script>
+
+		<!-- ECharts js -->
+	    <script src="./assets/plugins/echarts/echarts.js"></script>
+
+		<!-- Custom js-->
+		<script src="assets/js/custom.js"></script>
+
+	</body>
+</html>
